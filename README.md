@@ -1,6 +1,6 @@
 # HTMLBudouX.swift
 
-HTMLBudouX.swift is a support library of [BudouX.swift])(https://github.com/griffin-stewie/BudouX.swift) to handle HTML.
+HTMLBudouX.swift is a support library of [BudouX.swift](https://github.com/griffin-stewie/BudouX.swift) to handle HTML.
 
 [Detail about BudouX.swift is here](https://github.com/griffin-stewie/BudouX.swift) 
 
