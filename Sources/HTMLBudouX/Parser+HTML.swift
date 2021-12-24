@@ -13,7 +13,7 @@ import SwiftSoup
 // MARK: - Translates to `HTML`
 
 public extension BudouX.Parser {
-    func translateHTMLString(html: String, threshold: Int = Parser.defaultThres) -> String {
+    func translateHTMLString(html: String, threshold: Int = Parser.defaultThreshold) -> String {
         guard !html.isEmpty else {
             return html
         }
@@ -36,11 +36,11 @@ public extension BudouX.Parser {
 }
 
 extension BudouX.Parser {
-    func applyElement(parentElement: Element, threshold: Int = Parser.defaultThres) {
+    func applyElement(parentElement: Element, threshold: Int = Parser.defaultThreshold) {
         try! parentElement.addAttr("style", "word-break: keep-all")
         try! parentElement.addAttr("style", "overflow-wrap: break-word")
 
-        let chunks = self.parse(sentence: parentElement.textContent(), thres: threshold)
+        let chunks = self.parse(sentence: parentElement.textContent(), threshold: threshold)
         var charsToProcess = chunks.joined(separator: SEP)
         let ownerDocument = parentElement.ownerDocument()!
 
