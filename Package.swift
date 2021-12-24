@@ -11,7 +11,7 @@ let package = Package(
             targets: ["HTMLBudouX"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/griffin-stewie/BudouX.swift", .branch("main")),
+        .package(url: "https://github.com/griffin-stewie/BudouX.swift", from: "0.2.0"),
         .package(url: "https://github.com/scinfu/SwiftSoup.git", from: "1.7.4"),
     ],
     targets: [

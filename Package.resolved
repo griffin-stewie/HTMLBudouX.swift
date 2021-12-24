@@ -5,9 +5,9 @@
         "package": "BudouX.swift",
         "repositoryURL": "https://github.com/griffin-stewie/BudouX.swift",
         "state": {
-          "branch": "main",
-          "revision": "8f9953c75259f22e8c06b9fc332307aa240e0788",
-          "version": null
+          "branch": null,
+          "revision": "165e14ecccdc3d2fa9471115857b1b30d0e9a591",
+          "version": "0.2.0"
         }
       },
       {
