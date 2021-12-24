@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@_exported import BudouX
+import BudouX
 import SwiftSoup
 
 // MARK: - Translates to `HTML`
