@@ -5,12 +5,17 @@ import SwiftSoup
 
 final class ParserTranslateHTMLStringTests: XCTestCase {
 
+    struct ModelForTest: Model {
+        let supportedNaturalLanguages: Set<String> = []
+        let featureAndScore: [String: Int]
+    }
+
     let defaultModel: [String: Int] = [
         "UW4:a": 1001 // means "should separate right before 'a'".
     ]
 
     private func checkEqual(model: [String: Int], inputHTML: String, expectedHTML: String) {
-        let parser = BudouX.Parser(model: model)
+        let parser = BudouX.Parser(model: ModelForTest(featureAndScore: model))
         let result = parser.translateHTMLString(html: inputHTML)
         let resultDOM = try! SwiftSoup.parse(result)
         let expectedDOM = try! SwiftSoup.parse(expectedHTML)
