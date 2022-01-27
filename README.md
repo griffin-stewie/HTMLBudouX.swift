@@ -24,7 +24,7 @@ Support Swift Package Manager only. There are no plans to support other package 
 
 ```swift
 package.append(
-    .package(url: "https://github.com/griffin-stewie/HTMLBudouX.swift", from: "0.1.0")
+    .package(url: "https://github.com/griffin-stewie/HTMLBudouX.swift", from: "0.2.0")
 )
 
 package.targets.append(
