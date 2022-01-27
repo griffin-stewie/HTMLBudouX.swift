@@ -5,10 +5,15 @@ import SwiftSoup
 
 final class ParserApplyElementTests: XCTestCase {
 
+    struct ModelForTest: Model {
+        let supportedNaturalLanguages: Set<String> = []
+        let featureAndScore: [String: Int]
+    }
+
     private func checkEqual(model: [String: Int], inputHTML: String, expectedHTML: String) {
         let doc = try! SwiftSoup.parse(inputHTML)
         let inputElement = try! doc.select("p").first()!
-        let parser = BudouX.Parser(model: model)
+        let parser = BudouX.Parser(model: ModelForTest(featureAndScore: model))
         parser.applyElement(parentElement: inputElement)
 
         let expectedElement = try! SwiftSoup.parse(expectedHTML).select("p").first()!
